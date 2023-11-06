@@ -84,4 +84,26 @@ class TestVarasto(unittest.TestCase):
     	self.varasto.lisaa_varastoon(5)
     	
     	self.assertAlmostEqual(self.varasto.saldo, 10)
+    	
+    def test_konstruktori_negatiivinen(self):
+    	varasto = Varasto(10, -5)
 
+    	self.assertAlmostEqual(varasto.saldo, 0)
+
+    def test_konstruktori_alku_saldo_pienempi_kuin_tilavuus(self):
+    	varasto = Varasto(10, 7)
+
+    	self.assertAlmostEqual(varasto.saldo, 7)
+
+    def test_konstruktori_alku_saldo_isompi_kuin_tilavuus(self):
+    	varasto = Varasto(10, 15)
+
+    	self.assertAlmostEqual(varasto.saldo, 10)
+    	
+    def test_str_method_returns_correct_string_representation(self):
+    	varasto = Varasto(10)
+    	varasto.lisaa_varastoon(5)
+
+    	result = str(varasto)
+    	expected = "saldo = 5, vielä tilaa 5"
+    	self.assertEqual(result, expected)
