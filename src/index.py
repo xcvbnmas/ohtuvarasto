@@ -18,7 +18,7 @@ def main():
     print("Lisätään 50.7")
     mehua.lisaa_varastoon(50.7)
     print(f"Mehuvarasto: {mehua}")
-    print("Otetaan 3.14 pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp")
+    print("Otetaan 3.14")
 
 if __name__ == "__main__":
     main()
