@@ -29,4 +29,4 @@ jobs:
       - name: Install Pylint
         run: poetry run pip install pylint
       - name: Run Pylint
-        run: poetry run pylint your_python_file.py
+        run: poetry run pylint src
